@@ -1,0 +1,15 @@
+{
+  "name": "Gaunt",
+  "version": "1.0.0",
+  "description": "Gaunt is a complete frontity based theme package which is modern and unique in it's design.",
+  "keywords": [
+    "frontity",
+    "frontity-theme"
+  ],
+  "license": "Apache-2.0",
+  "dependencies": {
+    "frontity": "^1.5.2",
+    "react-icons": "^3.9.0",
+    "react-share": "^4.1.0"
+  }
+}
