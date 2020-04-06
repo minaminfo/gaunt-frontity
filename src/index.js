@@ -46,20 +46,19 @@ const Root = () => {
   );
 };
 export default {
-  name: "minam-theme",
+  name: "Gaunt",
   roots: {
     theme: Root,
   },
   state: {
     theme: {
+      // show author section on post page -- set is false if  you don't want to
       showAuthor: true,
       isMobileMenuOpen: false,
       searchExpanded: false,
+      // link to your logo image
       logoImage: "https://res.cloudinary.com/minam/image/upload/v1586166045/logo-omg.svg",
-      colors: {
-        backgroundClr: "#ebebeb",
-        foregroundClr: "#414141",
-      },
+      // customize menu here
       menu: [
         ["Home", "/"],
         ["About", "/about/"],
@@ -68,6 +67,7 @@ export default {
     },
     footer: {
       copyright: "Copyright M. Inam",
+      // your social media links. Add/remove other in footer section too and also import icon
       social: {
         facebook: "https://facebook.com/minam.info",
         twitter: "https://twitter.com/minam_info",
