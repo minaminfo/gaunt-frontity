@@ -23,7 +23,7 @@ This structure implies having a main Frontity project (root `package.json`) and 
     |__ /my-custom-extension-2
 ```
 
-#### [The Project](https://docs.frontity.org/learning-frontity/project)
+### [The Project](https://docs.frontity.org/learning-frontity/project)
 
 These files in the root represents the Frontity project that can be launched and that will allow us to see the _theme_ (or any other package) in action
 
