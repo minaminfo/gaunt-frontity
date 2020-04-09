@@ -1,5 +1,5 @@
 {
-  "name": "gaunt-frontity",
+  "name": "gaunt-frontity-theme-project",
   "version": "1.0.0",
   "private": true,
   "description": "Frontity project",
@@ -13,11 +13,11 @@
   },
   "prettier": {},
   "dependencies": {
-    "frontity": "^1.5.2",
     "@frontity/core": "^1.5.1",
-    "@frontity/wp-source": "^1.6.2",
-    "@frontity/tiny-router": "^1.1.1",
     "@frontity/html2react": "^1.3.1",
-    "@frontity/mars-theme": "./packages/mars-theme"
+    "@frontity/tiny-router": "^1.1.1",
+    "@frontity/wp-source": "^1.6.2",
+    "frontity": "^1.5.2",
+    "gaunt-theme": "file:packages/gaunt-theme"
   }
 }
