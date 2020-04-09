@@ -8,7 +8,7 @@ In Frontity, _themes_ are packages that can be published in NPM so they can be i
 
 > You can find all the Frontity themes looking for the tag [`frontity-theme`](https://www.npmjs.com/search?q=keywords:frontity-theme) at npm
 
-The suggested structure for developing new themes that works with frontity is the following one where the theme we're developing will become a local dependency of our main `package.json`
+The suggested structure for developing new themes that works with frontity is the following one, where the theme we're developing is a local dependency of our main `package.json`
 
 ```
 "dependencies": {
@@ -84,13 +84,13 @@ This structure allows to:
 - Launch the project using the theme locally
 - Publish the theme independently 
 
-So any developer can clone this project, launch the Frontity project locally, have a look at how the theme looks like & behave, make contributions (pull requests) to your repository that can be merged into the main repo.
+So any developer can clone this project, launch the Frontity project locally, have a look at how the theme looks like & behave and make contributions (pull requests) to your repository (that can be eventually merged into the main repo).
 
-With all of this the owner of the theme still can publish those new updates independently (from the theme folder, `packages/gaunt-theme` in this case)
+With all of this, the owner of the theme still can publish those new updates independently (from the theme folder, `packages/gaunt-theme` in this case)
 
 ## Installing
 
-So, after these explanations... what do I need to do befaore launching locally this project using this theme?
+So, after these explanations... what do I need to do before launching locally this project using this theme?
 
 From the root
 
