@@ -1,26 +1,23 @@
 {
-  "name": "Gaunt",
+  "name": "gaunt-frontity-theme-project",
   "version": "1.0.0",
-  "description": "Gaunt is a complete frontity based theme package which is modern and unique in it is design.",
+  "private": true,
+  "description": "Frontity project",
   "keywords": [
-    "frontity",
-    "frontity-theme",
-    "full theme",
-    "sidebar theme"
+    "frontity"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/minaminfo/gaunt-frontity.git"
-  },
   "scripts": {
-    "test": "echo \"No test specified\""
+    "dev": "frontity dev",
+    "build": "frontity build",
+    "serve": "frontity serve"
   },
-  "author": "https://twitter.com/minam_info",
-  "license": "MIT License",
-  "homepage": "https://github.com/minaminfo/gaunt-frontity.git",
+  "prettier": {},
   "dependencies": {
+    "@frontity/core": "^1.5.1",
+    "@frontity/html2react": "^1.3.1",
+    "@frontity/tiny-router": "^1.1.1",
+    "@frontity/wp-source": "^1.6.2",
     "frontity": "^1.5.2",
-    "react-icons": "^3.9.0",
-    "react-share": "^4.1.0"
+    "gaunt-theme": "file:packages/gaunt-theme"
   }
 }
