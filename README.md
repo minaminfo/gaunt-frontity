@@ -8,7 +8,15 @@ In Frontity, _themes_ are packages that can be published in NPM so they can be i
 
 > You can find all the Frontity themes looking for the tag [`frontity-theme`](https://www.npmjs.com/search?q=keywords:frontity-theme) at npm
 
-The suggested structure for developing new themes that works with frontity is what is called a ["monorepo multipackage"](https://www.toptal.com/front-end/guide-to-monorepos) (like the current one).
+The suggested structure for developing new themes that works with frontity is the following one, where the theme we're developing is a local dependency of our main `package.json`
+
+```
+"dependencies": {
+    "gaunt-theme": "file:packages/gaunt-theme"
+  }
+```
+
+> This type of dependency is automatically define if we create the package (theme) w/ the frontity command `npx frontity create-package gaunt-theme`
 
 This structure implies having a main Frontity project (root `package.json`) and some packages (each one with its own `package.json`) under the `packages` folder
 
@@ -66,7 +74,7 @@ preventing this package (the main Frontity project defined in the root) being pu
 
 ### The Theme
 
-So, with this structure we can develop our theme as a package inside the `packages` folder. Each one of these _packages_ will have its own `package.json` and this packages are the ones meant to be published (`npm publish`)
+So, with this structure we can develop our theme as a package inside the `packages` folder. Each one of these _packages_ will have its own `package.json` and these packages are the ones meant to be published (`npm publish`)
 
 > In frontity we can create a new package by doing `npx frontity  create-package <my package name>` (from the root of the Frontity project)
 
@@ -76,18 +84,34 @@ This structure allows to:
 - Launch the project using the theme locally
 - Publish the theme independently 
 
-So any developer can clone this project, launch the Frontity project locally, have a look at how the theme looks like & behave, make contributions (pull requests) to your repository that can be merged into the main repo.
+So any developer can clone this project, launch the Frontity project locally, have a look at how the theme looks like & behave and make contributions (pull requests) to your repository (that can be eventually merged into the main repo).
 
-With all of this the owner of the theme still can publish those new updates independently (from the theme folder, `packages/gaunt-theme` in this case)
+With all of this, the owner of the theme still can publish those new updates independently (from the theme folder, `packages/gaunt-theme` in this case)
 
 ## Installing
 
-So, after these explanations... what do I need to do befaore launching locally this project using this theme?
+So, after these explanations... what do I need to do before launching locally this project using this theme?
 
-From the root → `npm install`
-From `packages/gaunt-theme` → `npm install`
+From the root
 
-With these commands we'll install the dependencies of the Frontity project and the specific dependenencies of the theme so everything can work properly
+```
+npm install
+```
+
+This command will install the dependencies of the Frontity project and the dependencies of its dependencies, just as any other npm package
+
+So, as our theme is also one of our dependencies ([a local dependency](https://www.viget.com/articles/how-to-use-local-unpublished-node-packages-as-project-dependencies/)) is: 
+
+```
+"dependencies": {
+   ...
+    "gaunt-theme": "file:packages/gaunt-theme"
+  }
+```
+
+All needed dependencies are installed (the ones defined for the frontity project and the ones defined for the theme)
+
+>  More info about this → npm install <folder>: https://docs.npmjs.com/cli/install
 
 ## Launching
 
@@ -98,3 +122,12 @@ npx frontity dev
 ```
 
 This will launch the Frontity project using this theme
+
+## Publishing the theme
+
+Just do:
+
+```
+cd packages/gaunt-theme
+npm publish
+```
